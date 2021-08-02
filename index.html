@@ -245,11 +245,10 @@
 					<div class="form-group">
 						<label class="col-md-4 control-label" for="button1id"></label>
 						<div class="col-md-8">
-							<button id="button1id" name="button1id" class="btn btn-success">
+							<button
+								onclick="topOfDescent(document.getElementById('ground_speed').value, document.getElementById('current_altitude').value, document.getElementById('target_altitude').value)"
+							>
 								Submit
-							</button>
-							<button id="button2id" name="button2id" class="btn btn-danger">
-								Reset
 							</button>
 						</div>
 					</div>
@@ -641,6 +640,22 @@
 				} else {
 					x.className = x.className.replace(" w3-show", "");
 				}
+			}
+
+			// function used for calculating the descent rate and the Top Of Descent Point
+			function topOfDescent(ground_speed, current_altitude, target_altitude) {
+				var descent_rate = parseInt(ground_speed) * 5;
+				tod = Math.ceil(
+					((parseInt(current_altitude) - parseInt(target_altitude)) * 3) /
+						descent_rate
+				);
+				alert(
+					"Descent Rate: " +
+						descent_rate +
+						" ft.\nTop Of Descent: " +
+						tod +
+						" nm"
+				);
 			}
 		</script>
 	</body>
