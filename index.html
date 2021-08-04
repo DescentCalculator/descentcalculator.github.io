@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+	<!-- <link rel="stylesheet" href="styles.css"> -->
 	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,6 +24,7 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 	<meta name="msapplication-TileColor" content="#da532c" />
 	<meta name="theme-color" content="#ffffff" />
+	
 	<style>
 		body,
 		h1,
@@ -251,8 +253,12 @@
 							<button
 								onclick="topOfDescent(document.getElementById('ground_speed').value, document.getElementById('current_altitude').value, document.getElementById('target_altitude').value)"
 							>
-								Submit
+							Submit
 							</button>
+							<!-- <button
+								onclick="topOfDescent()">Submit</button> -->
+								
+							
 						</div>
 					</div>
 				</fieldset>
@@ -649,11 +655,32 @@
 
 			// function used for calculating the descent rate and the Top Of Descent Point
 			function topOfDescent(ground_speed, current_altitude, target_altitude) {
+				// function topOfDescent(){
 				var descent_rate = parseInt(ground_speed) * 5;
+				// var descent_rate = parseInt(document.getElementById('ground_speed').value);
+				console.log(descent_rate);
 				tod = Math.ceil(
 					((parseInt(current_altitude) - parseInt(target_altitude)) * 3) /
 						descent_rate
 				);
+				
+				// tod = Math.ceil(
+				// 	(
+				// 		(
+				// 			parseInt(
+				// 				document.getElementById(
+				// 					'current_altitude'
+				// 					).value
+				// 					) - parseInt(
+				// 						document.getElementById(
+				// 							'target_altitude'
+				// 							)
+				// 							)
+				// 							) * 3) /
+				// 		descent_rate
+				// );
+				// console.log(tod);
+
 				alert(
 					"Descent Rate: " +
 						descent_rate +
