@@ -16,14 +16,28 @@
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 		crossorigin="anonymous"
 	/>
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="favicon/apple-touch-icon.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="32x32"
+		href="favicon/favicon-32x32.png"
+	/>
+	<link
+		rel="icon"
+		type="image/png"
+		sizes="16x16"
+		href="favicon/favicon-16x16.png"
+	/>
 	<link rel="manifest" href="favicon/site.webmanifest" />
 	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
 	<meta name="msapplication-TileColor" content="#da532c" />
 	<meta name="theme-color" content="#ffffff" />
-	
+
 	<style>
 		body,
 		h1,
@@ -99,7 +113,9 @@
 				>
 					<i class="fa fa-bars"></i>
 				</a>
-				<a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i> Top of Descent</a>
+				<a href="#home" class="w3-bar-item w3-button"
+					><i class="fa fa-home"></i> Top of Descent</a
+				>
 				<a href="#calculator" class="w3-bar-item w3-button w3-hide-small"
 					><i class="fa fa-calculator"></i> Descent Calculator</a
 				>
@@ -233,7 +249,7 @@
 							<button
 								onclick="topOfDescent(document.getElementById('ground_speed').value, document.getElementById('current_altitude').value, document.getElementById('target_altitude').value)"
 							>
-							Submit
+								Submit
 							</button>
 						</div>
 					</div>
@@ -260,33 +276,41 @@
 		<div class="w3-content w3-container w3-padding-64" id="simbrief">
 			<form class="form-horizontal">
 				<fieldset>
-				
-				<!-- Form Name -->
-				<legend>Simbrief Data Retrival</legend>
-				
-				<!-- Text input-->
-				<div class="form-group">
-				  <label class="col-md-4 control-label" for="simbrief_name"><p><b>Simbrief Username:</b></p></label>  
-				  <div class="col-md-4">
-				  <input id="simbrief_name" name="simbrief_name" type="text" placeholder="john12" class="form-control input-md" required="">
-				  <span class="help-block">You log into Simbrief using this username</span>  
-				  </div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="button1id"></label>
-					<div class="col-md-8">
-						<button
-							onclick="simbrief_retrieve(document.getElementById('simbrief_name').value)"
-						>
-						Retrieve
-						</button>
-					</div>
-				</div>
-				</fieldset>
-				</form>
-				
-		</div>
+					<!-- Form Name -->
+					<legend>Simbrief Data Retrival</legend>
 
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="simbrief_name"
+							><p><b>Simbrief Username:</b></p></label
+						>
+						<div class="col-md-4">
+							<input
+								id="simbrief_name"
+								name="simbrief_name"
+								type="text"
+								placeholder="john12"
+								class="form-control input-md"
+								required=""
+							/>
+							<span class="help-block"
+								>You log into Simbrief using this username</span
+							>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="button1id"></label>
+						<div class="col-md-8">
+							<button
+								onclick="simbrief_retrieve(document.getElementById('simbrief_name').value)"
+							>
+								Retrieve
+							</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
 
 		<!-- Footer -->
 		<footer
@@ -358,7 +382,7 @@
 			}
 
 			// simbrief retrival function
-			function simbrief_retrieve(username){
+			function simbrief_retrieve(username) {
 				console.log(username);
 				alert("This feature has not been implemented yet");
 			}
