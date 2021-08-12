@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-	<title>Descent Calculator</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-	/>
-	<link
-		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-		rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="apple-touch-icon"
-		sizes="180x180"
-		href="favicon/apple-touch-icon.png"
-	/>
-	<link
-		rel="icon"
-		type="image/png"
-		sizes="32x32"
-		href="favicon/favicon-32x32.png"
-	/>
-	<link
-		rel="icon"
-		type="image/png"
-		sizes="16x16"
-		href="favicon/favicon-16x16.png"
-	/>
-	<link rel="manifest" href="favicon/site.webmanifest">
-	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
-	<meta name="msapplication-TileColor" content="#da532c" />
-	<meta charset="UTF-8">
-	<!-- <meta name="theme-color" content="#ffffff" /> -->
-
-	<style>
-		body,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: "Lato", sans-serif;
-		}
-		body,
-		html {
-			height: 100%;
-			color: #777;
-			line-height: 1.8;
-		}
-
-		/* Create a Parallax Effect */
-		.bgimg-1,
-		.bgimg-2,
-		.bgimg-3 {
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-
-		/* First image (Top Of Descent Calculator) */
-		.bgimg-1 {
-			background-image: url("backgrounds/background.jpg");
-			min-height: 100%;
-		}
-
-		/* Second image (Simbrief) */
-		.bgimg-2 {
-			background-image: url("backgrounds/background1.jpg");
-			min-height: 100%;
-		}
-
-		.w3-wide {
-			letter-spacing: 10px;
-		}
-		.w3-hover-opacity {
-			cursor: pointer;
-		}
-
-		/* Turn off parallax scrolling for tablets and phones */
-		@media only screen and (max-device-width: 1600px) {
+	<head>
+		<meta charset="UTF-8">
+		<title>Descent Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<!-- <meta charset="UTF-8"> -->
+		<!-- <meta name="theme-color" content="#ffffff" /> -->
+		<style>
+			body,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: "Lato", sans-serif;
+			}
+			body,
+			html {
+				height: 100%;
+				color: #777;
+				line-height: 1.8;
+			}
+	
+			/* Create a Parallax Effect */
 			.bgimg-1,
 			.bgimg-2,
 			.bgimg-3 {
-				background-attachment: scroll;
-				min-height: 400px;
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
-		}
-	</style>
+	
+			/* First image (Top Of Descent Calculator) */
+			.bgimg-1 {
+				background-image: url("backgrounds/background.jpg");
+				min-height: 100%;
+			}
+	
+			/* Second image (Simbrief) */
+			.bgimg-2 {
+				background-image: url("backgrounds/background1.jpg");
+				min-height: 100%;
+			}
+	
+			.w3-wide {
+				letter-spacing: 10px;
+			}
+			.w3-hover-opacity {
+				cursor: pointer;
+			}
+	
+			/* Turn off parallax scrolling for tablets and phones */
+			@media only screen and (max-device-width: 1600px) {
+				.bgimg-1,
+				.bgimg-2,
+				.bgimg-3 {
+					background-attachment: scroll;
+					min-height: 400px;
+				}
+			}
+		</style>
+	</head>	
 	<body>
 		<!-- Navbar (sit on top) -->
 		<div class="w3-top">
