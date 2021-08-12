@@ -103,12 +103,12 @@
 				<a href="#calculator" class="w3-bar-item w3-button w3-hide-small"
 					><i class="fa fa-calculator"></i> Descent Calculator</a
 				>
-				<a href="#simbrief_info" class="w3-bar-item w3-button w3-hide-small"
+				<!-- <a href="#simbrief_info" class="w3-bar-item w3-button w3-hide-small"
 					><i class="fa fa-home"></i> Simbrief</a
 				>
 				<a href="#simbrief" class="w3-bar-item w3-button w3-hide-small"
 					><i class="fa fa-plane"></i> SimBrief Information</a
-				>
+				> -->
 			</div>
 
 			<!-- Navbar on small screens -->
@@ -120,14 +120,14 @@
 					href="#calculator"
 					class="w3-bar-item w3-button"
 					onclick="toggleFunction()"
-					>Calculator</a
+					><i class="fa fa-calculator"></i> Calculator</a
 				>
-				<a
+				<!-- <a
 					href="#simbrief"
 					class="w3-bar-item w3-button"
 					onclick="toggleFunction()"
 					>Simbrief</a
-				>
+				> -->
 			</div>
 		</div>
 
@@ -245,7 +245,7 @@
 
 		<!-- start of simbrief integration part HTMl-->
 
-		<div class="bgimg-2 w3-display-container w3-opacity-min" id="simbrief_info">
+		<!-- <div class="bgimg-2 w3-display-container w3-opacity-min" id="simbrief_info">
 			<div class="w3-display-middle" style="white-space: nowrap">
 				<span
 					class="
@@ -254,18 +254,18 @@
 					>SimBrief</span
 				>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Container (About Section) -->
-		<div class="w3-content w3-container w3-padding-64" id="simbrief">
+		<!-- <div class="w3-content w3-container w3-padding-64" id="simbrief">
 			<form class="form-horizontal">
 				<fieldset>
-				
+				 -->
 				<!-- Form Name -->
-				<legend>Simbrief Data Retrival</legend>
+				<!-- <legend>Simbrief Data Retrival</legend> -->
 				
 				<!-- Text input-->
-				<div class="form-group">
+				<!-- <div class="form-group">
 				  <label class="col-md-4 control-label" for="simbrief_name"><p><b>Simbrief Username:</b></p></label>  
 				  <div class="col-md-4">
 				  <input id="simbrief_name" name="simbrief_name" type="text" placeholder="john12" class="form-control input-md" required="">
@@ -285,7 +285,7 @@
 				</fieldset>
 				</form>
 				
-		</div>
+		</div> -->
 
 
 		<!-- Footer -->
@@ -338,30 +338,57 @@
 				}
 			}
 
+
+			// old tod function
 			// function used for calculating the descent rate and the Top Of Descent Point
-			function topOfDescent(ground_speed, current_altitude, target_altitude) {
-				// function topOfDescent(){
-				var descent_rate = parseInt(ground_speed) * 5;
-				// var descent_rate = parseInt(document.getElementById('ground_speed').value);
-				console.log(descent_rate);
-				tod = Math.ceil(
-					((parseInt(current_altitude) - parseInt(target_altitude)) * 3) /
-						descent_rate
-				);
-				alert(
-					"Descent Rate: " +
-						descent_rate +
-						" ft.\nTop Of Descent: " +
-						tod +
-						" nm"
-				);
-			}
+			// function topOfDescent(ground_speed, current_altitude, target_altitude) {
+			// 	// function topOfDescent(){
+			// 	var descent_rate = parseInt(ground_speed) * 5;
+			// 	// var descent_rate = parseInt(document.getElementById('ground_speed').value);
+			// 	console.log(descent_rate);
+			// 	tod = Math.ceil(
+			// 		((parseInt(current_altitude) - parseInt(target_altitude)) * 3) /
+			// 			descent_rate
+			// 	);
+			// 	alert(
+			// 		"Descent Rate: " +
+			// 			descent_rate +
+			// 			" ft.\nTop Of Descent: " +
+			// 			tod +
+			// 			" nm"
+			// 	);
+			// }
 
 			// simbrief retrival function
-			function simbrief_retrieve(username){
-				console.log(username);
-				alert("This feature has not been implemented yet");
+			// function simbrief_retrieve(username){
+			// 	console.log(username);
+			// 	alert("This feature has not been implemented yet");
+			// }
+
+
+			// new TOD function
+			function topOfDescent(ground_speed, current_altitude, target_altitude) {
+			// if ground speed is less than 200 kts, we will dynamically calculate the descent rate
+			if(ground_speed < 200){
+				var descent_rate = parseInt(ground_speed) * 5;
 			}
+			// if ground speed is greater than 200 kts, we will use a fixed descent rate of 1800 ft/min 
+			else if(ground_speed > 200 && ground_speed < 400){
+				var descent_rate = 1300;
+			}
+			else if(ground_speed > 400){
+				var descent_rate = 1500;
+			}
+			delta_altitude = parseInt(current_altitude) - parseInt(target_altitude);
+			tod = Math.ceil((delta_altitude * 3) / descent_rate);
+			alert(
+				"Descent Rate: " +
+					descent_rate +
+					" ft.\nTop Of Descent: " +
+					tod +
+					" nm"
+			);
+		}
 		</script>
 	</body>
 </html>
